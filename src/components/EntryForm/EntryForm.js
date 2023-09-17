@@ -1,4 +1,5 @@
 import {useState} from "react";
+import styles from "./EntryForm.module.css"
 
 const DEFAULT_STATE = {
 	currentSavings: 0,
@@ -77,8 +78,8 @@ function EntryForm(props) {
 
 
 	return (
-		<form className="form" onSubmit={submitNewInvestment} onReset={resetForm}>
-			<div className="input-group">
+		<form className={styles.form} onSubmit={submitNewInvestment} onReset={resetForm}>
+			<div className={styles['input-group']}>
 				<p>
 					<label htmlFor="current-savings">Current Savings ($)</label>
 					<input type="number" id="current-savings" value={form.currentSavings}
@@ -90,7 +91,7 @@ function EntryForm(props) {
 					       onChange={updateYearlyContribution}/>
 				</p>
 			</div>
-			<div className="input-group">
+			<div className={styles['input-group']}>
 				<p>
 					<label htmlFor="expected-return">
 						Expected Interest (%, per year)
@@ -103,11 +104,11 @@ function EntryForm(props) {
 					<input type="number" id="duration" value={form.duration} onChange={updateDuration}/>
 				</p>
 			</div>
-			<p className="actions">
-				<button type="reset" className="buttonAlt">
+			<p className={styles.actions}>
+				<button type="reset" className={styles.buttonAlt}>
 					Reset
 				</button>
-				<button type="submit" className="button">
+				<button type="submit" className={styles.button}>
 					Calculate
 				</button>
 			</p>

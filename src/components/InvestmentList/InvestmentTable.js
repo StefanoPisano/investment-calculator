@@ -1,5 +1,6 @@
 import React from "react";
 import Investment from "../InvestmentByYears/Investment";
+import styles from "./InvestmentTable.module.css";
 
 function InvestmentTable({investments}) {
 	const investmentList = investments.map(inv => <Investment key={crypto.randomUUID()} investment={inv}/>);
@@ -11,7 +12,7 @@ function InvestmentTable({investments}) {
 		</tr>
 
 	return (
-		<table className="result">
+		<table className={styles.result}>
 			<thead>
 			<tr>
 				<th>Year</th>
