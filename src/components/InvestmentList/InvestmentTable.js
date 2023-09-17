@@ -8,7 +8,7 @@ function InvestmentTable({investments}) {
 	const rows = investmentList.length
 		? investmentList
 		: <tr>
-			<td colSpan="5">No data</td>
+			<td colSpan="5" style={{textAlign:"center", fontSize:"1.2em"}}>no investments</td>
 		</tr>
 
 	return (
