@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "../../assets/investment-calculator-logo.png";
-import styles from "./header.module.css";
+import styles from "./Header.module.css";
 
 function Header() {
 	return (<header className={styles.header}>
