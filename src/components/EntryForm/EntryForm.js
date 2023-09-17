@@ -14,7 +14,7 @@ function EntryForm(props) {
 	const updateCurrentSavings = event => {
 		if (event.target.value) {
 			setForm((prevState) => {
-				return {...prevState, currentSavings: event.target.value}
+				return {...prevState, currentSavings: +event.target.value}
 			})
 		}
 	}
@@ -22,7 +22,7 @@ function EntryForm(props) {
 	const updateYearlyContribution = event => {
 		if (event.target.value) {
 			setForm((prevState) => {
-				return {...prevState, yearlyContribution: event.target.value}
+				return {...prevState, yearlyContribution: +event.target.value}
 			})
 		}
 	}
@@ -30,7 +30,7 @@ function EntryForm(props) {
 	const updateExpectedReturn = event => {
 		if (event.target.value) {
 			setForm((prevState) => {
-				return {...prevState, expectedReturn: event.target.value}
+				return {...prevState, expectedReturn: +event.target.value}
 			})
 		}
 	}
@@ -38,7 +38,7 @@ function EntryForm(props) {
 	const updateDuration = event => {
 		if (event.target.value) {
 			setForm((prevState) => {
-				return {...prevState, duration: event.target.value}
+				return {...prevState, duration: +event.target.value}
 			})
 		}
 	}
